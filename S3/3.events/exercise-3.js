@@ -4,4 +4,4 @@ function handleChange(event){
 
 const input$$ = document.querySelector('input');
 
-input$$.addEventListener('change', handleChange);
+input$$.addEventListener('input', handleChange);

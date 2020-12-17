@@ -1,5 +1,5 @@
 # Español
-Basandote en el siguiente html, añade un evento 'change' que ejecute un console.log con el valor del input.
+Basandote en el siguiente html, añade un evento 'input' que ejecute un console.log con el valor del input.
 
 ```html
 <!DOCTYPE html>
