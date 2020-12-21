@@ -26,12 +26,12 @@ const createNationalizeP = (person) => {
     div$$.appendChild(p$$);
     div$$.appendChild(button$$);
 
-    button$$.addEventListener('click', () => { removeP(div$$, a) })
+    button$$.addEventListener('click', () => { removeP(div$$) })
     document.body.appendChild(div$$);
 }
 
 
-const removeP = (nodeEl$$, a) => {
+const removeP = (nodeEl$$) => {
     nodeEl$$.remove();
 }
 
