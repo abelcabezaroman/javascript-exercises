@@ -1,3 +1,5 @@
+# Descripción
+
 En este ejercicio vamos a simular una batalla de rol, con dados y estadísticas por doquier!
 
 De nuevo, tendremos una api local que deberemos ejecutar con json-server. La url en cuestión de los personajes sería
@@ -41,6 +43,6 @@ caso, el adversario sería el ganador.
 
 Para terminar y por hacer más justa la batalla, que raza ataca primero se decidirá de manera aleatoria.
 
-# Mucha suerte a todos los contrincantes!
+* Mucha suerte a todos los contrincantes!*
 
 
