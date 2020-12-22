@@ -1,5 +1,26 @@
-En base a la api Open Trivia (https://opentdb.com/api_config.php), vamos a desarrollar un trivial con la siguiente url 'https://opentdb.com/api.php?amount=10'. Esta api nos devolverá una serie de preguntas con sus respuestas, tanto erroneas como correctas. 
-
-La idea es hacer un juego en el que el usuario introduzca en un input las caracteristicas del Trivial y que al darle al 'Start Game' le salgan las preguntas de la api para que pueda comenzar el juego. Una vez las responda todas, le mostraremos al usuario el resultado.
-
-Ten en cuenta que hay dos tipos de preguntas. Aquellas con 3 respuestas erroneas y 1 correcta y aquellas con respuesta verdadero / falso.
+Ahora vamos a trabajar con JSON SERVER para simular una api. Es muy fácil de usar. Simplemente instálalo de manera
+ global usando el
+ comando  `npm i -g json-server` y una vez lo tengas instalado, ejecuta este comando `json -server --watch exercise-2
+ .json` en la posición donde esté el archivo   exercise-3-db.json. Los datos que nos brindará serán
+ los alojados en el archivo exercise-2.json y estarán accesibles por defecto en la url localhost:3000.
+ 
+ Para este ejercicio vamos a obtener y pintar en el html una serie de notas del diario de nuestro queridísimo Eliot
+ . Para ello deberemos ejecutar el comando que comentabamos anteriormente y hacer un .fetch() a la url `http://localhost:3000/diary`. 
+ 
+ Una vez tengas los datos tenemos que ordenarlos por fecha de menor a mayor con la propiedad .date. Nuestro carismático
+  personaje es un poco
+  caótico y escribe
+  las
+  notas en páginas salteadas...
+  
+ Cuando lo tengas crea un div para cada
+  nota del diario e
+  introduce un ``<h3>`` y un ``<p>``
+  para su .title y .description correspondientemente.
+  
+  Finalmente añade un botón para poder eliminar las notas del diario. En concreto hay una que a Eliot no le apetece
+   recordar mucho...
+    
+    
+   
+   
