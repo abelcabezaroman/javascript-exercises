@@ -43,6 +43,6 @@ caso, el adversario sería el ganador.
 
 Para terminar y por hacer más justa la batalla, que raza ataca primero se decidirá de manera aleatoria.
 
-* Mucha suerte a todos los contrincantes!*
+**Mucha suerte a todos los contrincantes!**
 
 
