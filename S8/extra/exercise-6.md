@@ -30,7 +30,7 @@ máximo del dado.
 Por cada dado, tendremos que comprobar si el resultado coincide con el valor de la propiedad .critic del personaje. En
 caso afirmativo, el daño de ESE dado se multiplicará x2.
 
-``js
+``
 Ejemplo de resultado de una tirada de humano:
 
 4
