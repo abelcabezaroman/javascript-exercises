@@ -40,7 +40,8 @@ Ejemplo de resultado de una tirada de humano:
 20
 10 x2 = 20
 
-Daño total = 74````
+Daño total = 74
+````
 
 Una vez que tengamos el daño completo, le restaremos el valor de la propiedad .defense del adversario.
 
