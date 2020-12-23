@@ -12,5 +12,4 @@ const runTimeOut = () => {
 };
 
 runTimeOut();
-
 ```
