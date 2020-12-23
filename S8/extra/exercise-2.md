@@ -4,7 +4,7 @@ Para este ejercicio vamos a obtener y pintar en el html una serie de notas del d
  
 Una vez tengas los datos tenemos que ordenarlos por fecha de menor a mayor con la propiedad .date. Nuestro carismático personaje es un poco caótico y escribe las notas en páginas salteadas...
   
-Cuando lo tengas crea un div para cada nota del diario e introduce un ``<h3>`` y un ``<p>`` para su .title y .description correspondientemente.
+Cuando lo tengas crea un div para cada nota del diario e introduce un ``<h3>``, un  ``<h5>`` y un ``<p>`` para su .title, .date y .description respectivamente.
   
 Finalmente añade un botón para poder eliminar las notas del diario. En concreto hay una que a Eliot no le apetece recordar mucho...
     

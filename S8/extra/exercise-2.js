@@ -9,10 +9,9 @@ const orderDiaryNotes = (diary) => {
 }
 
 const createDiaryNotes = (diaryNotes) => {
-
     for (const diaryNote of diaryNotes) {
         const div$$ = document.createElement('div');
-        div$$.innerHTML = `<h4>${diaryNote.title}</h4><p>${diaryNote.description}</p>`
+        div$$.innerHTML = `<h3>${diaryNote.title}</h3><h5>${diaryNote.date}</h5><p>${diaryNote.description}</p>`
 
         const button$$ = document.createElement('button');
         button$$.textContent = 'X';
@@ -20,7 +19,6 @@ const createDiaryNotes = (diaryNotes) => {
         div$$.appendChild(button$$);
         document.body.appendChild(div$$);
     }
-
 }
 
 const removeDiaryNote = (diaryNote$$) => {
