@@ -30,7 +30,7 @@ máximo del dado.
 Por cada dado, tendremos que comprobar si el resultado coincide con el valor de la propiedad .critic del personaje. En
 caso afirmativo, el daño de ESE dado se multiplicará x2.
 
-``
+````
 Ejemplo de resultado de una tirada de humano:
 
 4
@@ -40,7 +40,7 @@ Ejemplo de resultado de una tirada de humano:
 20
 10 x2 = 20
 
-Daño total = 74``
+Daño total = 74````
 
 Una vez que tengamos el daño completo, le restaremos el valor de la propiedad .defense del adversario.
 
