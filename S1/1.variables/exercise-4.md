@@ -1,5 +1,5 @@
-# English
-Create a variable called z, assign x + y to it, and display the result in an alert box.
+Dado el siguiente javascript, cambia el valor de la propiedad ``age`` a 25.
 
-# Español
-Crea una variable llamada z, asignale x + y a ella, muestra el resultado en una caja de alerta.
+```js
+const character = {name: 'Jack Sparrow', age: 10};
+```
