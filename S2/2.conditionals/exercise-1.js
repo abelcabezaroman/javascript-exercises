@@ -27,7 +27,7 @@ for (let index = 0; index < alumns.length; index++) {
     //     approvedCount++;
     // }
 
-    alumn.isApproved = approvedCount >= 2 ? true : false;
+    alumn.isApproved = approvedCount >= 2;
 }
 
 console.log(alumns);
