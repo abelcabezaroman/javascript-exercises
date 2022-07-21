@@ -17,7 +17,12 @@ const createDiaryNotes = (diaryNotes) => {
 
         const button$$ = document.createElement('button');
         button$$.textContent = 'X';
-        button$$.addEventListener('click', () => removeDiaryNote(div$$))
+        button$$.addEventListener('click', () => {removeDiaryNote(div$$)})
+
+        // button$$.addEventListener('click', function(){
+        //     div$$.remove()
+        // })
+
         div$$.appendChild(button$$);
         document.body.appendChild(div$$);
     }
@@ -26,3 +31,4 @@ const createDiaryNotes = (diaryNotes) => {
 const removeDiaryNote = (diaryNote$$) => {
     diaryNote$$.remove();
 }
+
