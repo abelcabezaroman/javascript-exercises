@@ -1,39 +1,22 @@
-const btn$$ = document.querySelector("[data-fn='callACat']");
+fetch("https://ghibliapi.herokuapp.com/films")
+  .then((res) => res.json())
+  .then(printAnimes);
 
-btn$$.addEventListener("click", getACat);
+function printAnimes(animes) {
+  const divFather$$ = document.createElement("div");
+  divFather$$.classList.add("b-gallery");
 
-function getACat() {
-  fetch("https://api.thecatapi.com/v1/images/search")
-    .then((res) => res.json())
-    .then(printCat);
-}
+  for (const anime of animes) {
+    const div$$ = document.createElement("div");
+    div$$.classList.add("b-gallery__item");
 
-function printCat(cat) {
-  const div$$ = document.createElement("div");
+    div$$.innerHTML = `
+        <h2 class="b-gallery__title">${anime.title}</h2>
+        <img src="${anime.image}"/>
+      `;
 
-  div$$.addEventListener("click", () => {expandCat(div$$)})
-  const btn$$ = document.createElement("button");
-  btn$$.textContent = "Remove";
-  btn$$.addEventListener("click", () => {
-    removeCat(div$$);
-  });
+    divFather$$.appendChild(div$$);
+  }
 
-  div$$.innerHTML = `<img width="300" src="${cat[0].url}"/>`;
-  div$$.appendChild(btn$$);
-
-  document.body.appendChild(div$$);
-}
-
-function removeCat(div$$) {
-  div$$.remove();
-}
-
-function expandCat(div$$){
-    const img$$ = div$$.querySelector("img");
-
-    if(img$$.getAttribute("width") === "100%"){
-        img$$.setAttribute("width", "300");
-    } else{
-        img$$.setAttribute("width", "100%");
-    }
+  document.body.appendChild(divFather$$);
 }

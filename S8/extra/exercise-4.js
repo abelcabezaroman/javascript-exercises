@@ -8,7 +8,7 @@ function createApp() {
     fetch(baseUrl + "planets").then(res => res.json()).then(planets => {
         for (const planet of planets) {
             const planet$$ = document.createElement('div');
-            
+
             planet$$.innerHTML = `
                 <img height="200" src="${planet.image}"/>
                 <h2>${planet.name}</h2>
@@ -22,9 +22,8 @@ function createApp() {
 }
 
 let actualCharacters = [];
-function getCharactersFilteredByPlanet(idPlanet){
-    search$$.innerHTML = '';
-    characters$$.innerHTML = '';
+function getCharactersFilteredByPlanet(idPlanet) {
+
     fetch(baseUrl + "characters?idPlanet=" + idPlanet).then(res => res.json()).then(characters => {
         actualCharacters = characters;
         createSearch()
@@ -32,7 +31,8 @@ function getCharactersFilteredByPlanet(idPlanet){
     })
 }
 
-function createSearch(){
+function createSearch() {
+    search$$.innerHTML = '';
     const input$$ = document.createElement("input");
     const button$$ = document.createElement("button");
     button$$.textContent = "Buscar";
@@ -43,16 +43,13 @@ function createSearch(){
     search$$.appendChild(button$$)
 }
 
-function filterCharacters(searchValue){
-    const filteredCharacters = actualCharacters.filter((actualCharacter) => actualCharacter.name.toLowerCase() === searchValue.toLowerCase())
-    characters$$.innerHTML = '';
-
+function filterCharacters(searchValue) {
+    const filteredCharacters = actualCharacters.filter((actualCharacter) => actualCharacter.name.toLowerCase().includes(searchValue.toLowerCase()))
     printCharacters(filteredCharacters);
-    
 }
 
-
-function printCharacters (characters) {
+function printCharacters(characters) {
+    characters$$.innerHTML = '';
     for (const character of characters) {
         const character$$ = document.createElement('div');
 
@@ -60,8 +57,23 @@ function printCharacters (characters) {
             <img height="200" src="${character.avatar}"/>
             <h2>${character.name}</h2>
         `
+
+        character$$.addEventListener("click", () => printCharacterDescription(character$$, character.description))
+
+
         characters$$.appendChild(character$$)
     }
+}
+
+function printCharacterDescription(div$$, description){
+    const oldP$$ = div$$.querySelector("p");
+     if(oldP$$){
+        oldP$$.remove();
+     } else{
+        const p$$ = document.createElement("p");
+        p$$.textContent = description;
+        div$$.appendChild(p$$);
+     }
 }
 
 
