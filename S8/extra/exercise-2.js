@@ -2,8 +2,10 @@
 fetch('http://localhost:3000/diary').then(res => res.json()).then(diary => {
     const sortedDiary = orderDiaryNotes(diary);
     createDiaryNotes(sortedDiary)
+  
     // createDiaryNotes(orderDiaryNotes(diary))
 });
+
 
 const orderDiaryNotes = (diary) => {
     return diary.sort((a, b) => new Date(a.date) - new Date(b.date)) // puedes transformar un texto en fecha y
@@ -17,7 +19,7 @@ const createDiaryNotes = (diaryNotes) => {
 
         const button$$ = document.createElement('button');
         button$$.textContent = 'X';
-        button$$.addEventListener('click', () => removeDiaryNote(div$$))
+        button$$.addEventListener('click', () => {removeDiaryNote(div$$)})
         div$$.appendChild(button$$);
         document.body.appendChild(div$$);
     }

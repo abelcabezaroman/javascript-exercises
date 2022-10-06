@@ -5,6 +5,7 @@ const mutations = [{name: 'Porompompero', description: 'Hace que el alien pueda 
 const foundCucushumushu = aliens.find(alien => alien.name === 'Cucushumushu');
 const foundPorompompero = mutations.find(mutation => mutation.name === 'Porompompero');
 
-const newSuperAlien = {...foundCucushumushu, mutation: {...foundPorompompero}};
 
-console.log(newSuperAlien);
+foundCucushumushu.mutation = foundPorompompero
+
+// const newSuperAlien = {...foundCucushumushu, mutation: foundPorompompero};

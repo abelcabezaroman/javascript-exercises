@@ -10,6 +10,7 @@ function printAnimes(animes) {
     const div$$ = document.createElement("div");
     div$$.classList.add("b-gallery__item");
 
+    div$$.setAttribute("data-aos", "flip-left")
     div$$.innerHTML = `
         <h2 class="b-gallery__title">${anime.title}</h2>
         <img src="${anime.image}"/>
@@ -19,4 +20,7 @@ function printAnimes(animes) {
   }
 
   document.body.appendChild(divFather$$);
+
+  window.AOS.init();
+
 }

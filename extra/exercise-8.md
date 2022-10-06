@@ -1,6 +1,6 @@
-Dado el siguiente javascript, crea una función `attack` a la que le pases como parametro las dos naves y simule un disparo.
+Dado el siguiente javascript, crea una función `attack` a la que le pases como parametro las dos naves y simule un disparo de la primera nave a la segunda.
 
-Esta función generara un numero aleatorio de 1 al numero de la propiedad `.damage` de la primera nave y le restará el resultado al valor de la propiedad `.pv` de la segunda nave.
+Esta función generara un numero aleatorio de 1 al numero de la propiedad `.damage` de la primera nave y le restará el  resultado al valor de la propiedad `.pv` de la segunda nave.
 
 Ejecuta la función tantas veces como quieras.
 
