@@ -1,4 +1,4 @@
-Usa un foin para imprimir por consola los datos del alienigena.
+Usa un forin para imprimir por consola los datos del alienigena.
 ```js
 const alien = {
     name: 'Wormuck',

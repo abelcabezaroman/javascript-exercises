@@ -2,7 +2,7 @@
 
 En este ejercicio vamos a simular una batalla de rol, con dados y estadísticas por doquier!
 
-De nuevo, tendremos una api local que deberemos ejecutar con json-server `json-server --watch exercise-6.json` . La url en cuestión de los personajes sería
+De nuevo, tendremos una api local que deberemos ejecutar con json-server `json-server --watch exercise-6.json`. La url en cuestión de los personajes sería
 `http://localhost:3000/characters`. Ten en cuenta que como usamos imágenes locales tienes que hacer el ejercicio en esta misma carpeta o llevarte la carpeta /public (carpeta con imágenes) donde tengas tus propios ejercicios.
 
 En este caso vamos a realizar una batalla entre dos razas a elegir por el usuario. Por lo tanto, lo primero que
@@ -31,7 +31,7 @@ Por cada dado, tendremos que comprobar si el resultado coincide con el valor de 
 caso afirmativo, el daño de ESE dado se multiplicará x2.
 
 ````
-Ejemplo de resultado de una tirada de humano:
+Ejemplo de resultado de unas tiradas en el que el personaje tiene .critic con valor 10:
 
 4
 2
