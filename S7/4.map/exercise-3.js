@@ -4,3 +4,4 @@ const citiesName = cities.map(city => city.isVisited ? city.name + ' (Visitado)'
 // const citiesName = cities.map(city => city.isVisited ===  true ? city.name + ' (Visitado)' : city.name);
 
 console.log(citiesName);
+
