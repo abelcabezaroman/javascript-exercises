@@ -1,39 +1,50 @@
-const btn$$ = document.querySelector("[data-fn='callACat']");
-
-btn$$.addEventListener("click", getACat);
-
-function getACat() {
-  fetch("https://api.thecatapi.com/v1/images/search")
-    .then((res) => res.json())
-    .then(printCat);
+async function getPokemons(){
+  const res = await fetch("https://pokeapi.co/api/v2/pokemon")
+  const resPokemons = await res.json();
+  getDetailPokemons(resPokemons.results);
 }
 
-function printCat(cat) {
-  const div$$ = document.createElement("div");
-
-  div$$.addEventListener("click", () => {expandCat(div$$)})
-  const btn$$ = document.createElement("button");
-  btn$$.textContent = "Remove";
-  btn$$.addEventListener("click", () => {
-    removeCat(div$$);
-  });
-
-  div$$.innerHTML = `<img width="300" src="${cat[0].url}"/>`;
-  div$$.appendChild(btn$$);
-
-  document.body.appendChild(div$$);
+async function getDetailPokemons(pokemons){
+  const pokemonsPromises = pokemons.map(pokemon => fetch(pokemon.url).then(res => res.json()))
+  const detailPokemons = await Promise.all(pokemonsPromises);
+  console.log(detailPokemons)
+  printPokemons(detailPokemons)
 }
 
-function removeCat(div$$) {
-  div$$.remove();
+function printPokemons(pokemons){
+  for (const pokemon of pokemons) {
+    const container$$ = document.createElement("div");
+    container$$.innerHTML = `<div>
+      <h2>${pokemon.name}</h2>
+      <img src="${pokemon.sprites.front_default}"/>
+    </div>`
+    document.body.appendChild(container$$)
+  }
 }
 
-function expandCat(div$$){
-    const img$$ = div$$.querySelector("img");
+getPokemons()
 
-    if(img$$.getAttribute("width") === "100%"){
-        img$$.setAttribute("width", "300");
-    } else{
-        img$$.setAttribute("width", "100%");
-    }
-}
+// async function getPokemons(){
+//   const res = await fetch("https://pokeapi.co/api/v2/pokemon")
+//   const resPokemons = await res.json();
+//   getDetailPokemons(resPokemons.results);
+// }
+
+// async function getDetailPokemons(pokemons){
+//   const pokemonsPromises = []
+//   for (const pokemon of pokemons) {
+//     pokemonsPromises.push(fetch(pokemon.url))
+//   }
+
+//   const resDetailPokemons = await Promise.all(pokemonsPromises);
+//   const detailPokemons = [];
+
+//   for (const resDetailPokemon of resDetailPokemons) {
+//     detailPokemons.push(await resDetailPokemon.json())
+//   }
+  
+//   console.log(detailPokemons)
+
+// }
+
+// getPokemons()
