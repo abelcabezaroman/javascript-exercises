@@ -1,59 +1,92 @@
-const characters$$ = document.querySelector("[data-fn='characters']")
-let page = 1;
-init()
+const characters$$ = document.querySelector("[data-function='characters']")
+const arena$$ = document.querySelector("[data-function='arena']")
+let playerOne;
+let playerTwo;
+
+init();
 async function init() {
-    getAndPrintCharacters()
-    printButton()
+    const characters = await getCharacters();
+    printCharacters(characters);
 }
 
 async function getCharacters() {
-    const res = await fetch(`http://localhost:3000/characters?_page=${page}&_limit=5`)
-    return res.json();
+    try {
+        const res = await fetch("http://localhost:3000/characters");
+        return await res.json();
+    } catch (e) {
+        console.error(e)
+    }
 }
 
 function printCharacters(characters) {
     for (const character of characters) {
         const div$$ = document.createElement("div");
-
-        div$$.classList.add("b-gallery__item")
-
+        div$$.classList.add("c-characters__item")
         div$$.innerHTML = `
-            <img class="b-gallery__img" src="${character.image}"/>
-            <h2 class="b-gallery__text">${character.name}</h2>
+            <img src="${character.avatar}"/>
+            <h2>${character.name}</h2>
         `
 
+        div$$.addEventListener("click", () => { selectPlayer(character) })
         characters$$.appendChild(div$$)
     }
-};
-
-async function getAndPrintCharacters() {
-    const characters = await getCharacters();
-
-    addTransition();
-
-    setTimeout(() => {
-
-
-        printCharacters(characters);
-
-        page++;
-        if (page > 4) {
-            document.querySelector("button").remove();
-        }
-    }, 1000)
 }
 
-function addTransition() {
-    characters$$.classList.add("b-gallery--transition")
-    setTimeout(() => {
-        characters$$.classList.remove("b-gallery--transition")
-    }, 1000)
+function selectPlayer(character) {
+    if (playerOne) {
+        playerTwo = character;
+        readyForBattle();
+    } else {
+        playerOne = character;
+    }
 }
 
-function printButton() {
-    const btn$$ = document.createElement("button");
-    btn$$.classList.add("b-btn")
-    btn$$.textContent = "Cargar más";
-    btn$$.addEventListener("click", getAndPrintCharacters)
-    document.body.appendChild(btn$$)
+function readyForBattle() {
+    const button$$ = document.createElement("button");
+    button$$.innerHTML = "Fight!"
+    button$$.addEventListener('click', battle)
+    characters$$.appendChild(button$$)
+}
+
+function battle() {
+    const randomNumber = Math.floor(Math.random() * 2) + 1;
+    if (randomNumber === 1) {
+        round(playerOne, playerTwo);
+    } else {
+        round(playerTwo, playerOne);
+    }
+}
+
+function round(playerFighting, playerDefending) {
+    let roundDamage = 0;
+    for (const dice of playerFighting.damage) {
+        roundDamage += rollADice(dice, playerFighting.critic);
+    }
+
+    finalDamage(roundDamage, playerDefending);
+
+    if (playerDefending.vitality > 0) {
+        setTimeout(() => { round(playerDefending, playerFighting) }, 250);
+    }
+    console.log(playerFighting.name + " pegando");
+    console.log(playerDefending.name + " vida: " + playerDefending.vitality);
+}
+
+function finalDamage(damage, playerDefending) {
+    const finalDamage = damage - playerDefending.defense;
+    playerDefending.vitality -= finalDamage;
+}
+
+function rollADice(dice, critic) {
+    const indexOfD = dice.indexOf("d");
+    const timesToRoll = dice.substring(0, indexOfD);
+    const sides = dice.substring(indexOfD + 1, dice.length);
+    let diceDamage = 0;
+
+    for (let index = 0; index < timesToRoll; index++) {
+        rollingDamage = Math.floor(Math.random() * Number(sides)) + 1;
+        diceDamage += rollingDamage === critic ? rollingDamage * 2 : rollingDamage;
+    }
+
+    return diceDamage;
 }

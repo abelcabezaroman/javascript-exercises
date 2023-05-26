@@ -1,5 +1,5 @@
-Haz una peticion a la api de pokemons `https://pokeapi.co/api/v2/pokemon` y pinta su nombre e imagen. La api solo devuelve el nombre (.name) y la url (.url). 
+En base a la api Open Trivia (https://opentdb.com/api_config.php), vamos a desarrollar un trivial con la siguiente url 'https://opentdb.com/api.php?amount=10&type=multiple'. Esta api nos devolverá una serie de preguntas con sus respuestas, tanto erroneas como correctas. 
 
-Por ello tendrás que hacer para cada pokemon otra petición a la url de la propiedad (.url). Esto te devolverá el detalle del pokemon donde encontrarás su imagen (.sprites.front_default). 
+La idea es hacer un juego en el que el usuario introduzca en un input las caracteristicas del Trivial y que al darle al 'Start Game' le salgan las preguntas de la api para que pueda comenzar el juego. Una vez las responda todas, le mostraremos al usuario el resultado.
 
-Para que no haya problema con el pintado de los pokemons os recomendamos que hagais un `Promise.all` y que así todos los pokemons vengan en orden.
+Ten en cuenta que hay dos tipos de preguntas. Aquellas con 3 respuestas erroneas y 1 correcta y aquellas con respuesta verdadero / falso.
