@@ -90,3 +90,23 @@ function rollADice(dice, critic) {
 
     return diceDamage;
 }
+
+
+
+function battleRound(attackingChar, defendingChar){
+
+const totalDamage = 0;
+for (const damage of attackingChar.damage) {
+    const num = Number(damage.substring(0,1));
+    const num2 = Number(damage.substring(2,damage.length));
+
+    for (let index = 0; index < num; index++) {
+      totalDamage +=  Math.floor(Math.random() * num2) + 1;
+    }
+}
+
+
+    if(){
+        battleRound(defendingChar, attackingChar);
+    }
+}

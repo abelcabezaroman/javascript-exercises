@@ -1,4 +1,4 @@
-Ejecuta `json-server --watch exercise-10.json` para obtener un endpoint de personajes `http://localhost:3000/characters`.
+Ejecuta `json-server --watch exercise-6.json` para obtener un endpoint de personajes `http://localhost:3000/characters`.
 
 Pinta una galeria con los campos .name .image de los cinco primeros personajes. Para ello utilizaremos el endpoint con un filtro de página y limite de personajes de 5 por página `http://localhost:3000/characters?_page=1&_limit=5`.
 
