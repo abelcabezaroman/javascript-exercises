@@ -6,6 +6,7 @@ for (let index = 0; index < apps.length; index++) {
     const app = apps[index];
     const li$$ = document.createElement('li');
     li$$.textContent = app;
+    ul$$.appendChild(li$$);
 }
 
 document.body.appendChild(ul$$);

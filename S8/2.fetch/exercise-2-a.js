@@ -1,6 +1,7 @@
 const baseUrl = 'https://api.nationalize.io';
 
 const input$$ = document.querySelector('input');
+const button$ = document.querySelector('button');
 
 const search = () => {
     // const input$$ = event.target.previousElementSibling;
@@ -12,6 +13,5 @@ const search = () => {
 }
 
 
-const button$ = document.querySelector('button');
 
 button$.addEventListener('click', search);

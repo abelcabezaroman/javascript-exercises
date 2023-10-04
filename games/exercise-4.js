@@ -25,6 +25,7 @@ function drawBoard() {
             td$$.addEventListener('click', function () {
                 checkShot(img$$, i, j)
             });
+            
             td$$.appendChild(img$$)
             tr$$.appendChild(td$$);
         }

@@ -6,28 +6,40 @@ const alumns = [
     { name: 'Raquel Benito', T1: true, T2: true, T3: true }
 ]
 
+// for (let index = 0; index < alumns.length; index++) {
+//     const alumn = alumns[index];
+
+//     let approvedCount = 0;
+//     approvedCount = alumn.T1 ? approvedCount + 1 : approvedCount;
+//     approvedCount = alumn.T2 ? approvedCount + 1 : approvedCount;
+//     approvedCount = alumn.T3 ? approvedCount + 1 : approvedCount;
+//     //ALTERNATIVAS A LAS CONDICIONES
+//     // approvedCount = alumn.T1 === true ? approvedCount + 1 : approvedCount;
+//     // approvedCount = alumn.T2 === true ? approvedCount + 1 : approvedCount;
+//     // approvedCount = alumn.T3 === true ? approvedCount + 1 : approvedCount;
+
+//     //ALTERNATIVAS A LAS CONDICIONES
+//     // if(alumn.T1){
+//     //     approvedCount++;
+//     // }
+//     // if(alumn.T2){
+//     //     approvedCount++;
+//     // }
+//     // if(alumn.T3){
+//     //     approvedCount++;
+//     // }
+
+//     alumn.isApproved = approvedCount >= 2;
+// }
+
+
+
 for (let index = 0; index < alumns.length; index++) {
     const alumn = alumns[index];
 
-    let approvedCount = 0;
-    approvedCount = alumn.T1 ? approvedCount + 1 : approvedCount;
-    approvedCount = alumn.T2 ? approvedCount + 1 : approvedCount;
-    approvedCount = alumn.T3 ? approvedCount + 1 : approvedCount;
-    // approvedCount = alumn.T1 === true ? approvedCount + 1 : approvedCount;
-    // approvedCount = alumn.T2 === true ? approvedCount + 1 : approvedCount;
-    // approvedCount = alumn.T3 === true ? approvedCount + 1 : approvedCount;
-
-    // if(alumn.T1){
-    //     approvedCount++;
-    // }
-    // if(alumn.T2){
-    //     approvedCount++;
-    // }
-    // if(alumn.T3){
-    //     approvedCount++;
-    // }
-
-    alumn.isApproved = approvedCount >= 2;
+    if((alumn.T1 && alumn.T2) || (alumn.T1 && alumn.T3) || (alumn.T2 && alumn.T3)){
+        alumn.isApproved = true;
+    }
 }
 
 console.log(alumns);

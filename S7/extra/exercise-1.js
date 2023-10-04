@@ -11,7 +11,8 @@ const videogames = [
     },
 ];
 
-const rpgGames =videogames.filter(videogame => !!videogame.genders.find(gender => gender === 'RPG'));
+const rpgGames = videogames.filter(videogame => videogame.genders.includes('RPG'));
+// const rpgGames = videogames.filter(videogame => !!videogame.genders.find(gender => gender === 'RPG'));
 const totalScoreRpgGames = rpgGames.reduce((accumulator, videogame) => accumulator + videogame.score, 0)
 const average = totalScoreRpgGames / rpgGames.length;
 

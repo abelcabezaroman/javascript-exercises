@@ -12,12 +12,12 @@ console.log(placesToTravel);
 
 // DIFERENTE FORMA
 
-const placesToVisit = []
+// const placesToVisit = []
 
-for (const element of placesToTravel) {
-    if (element.id !== 11 || element.id !== 40) {
-        placesToVisit.push(element)
-    }
-}
+// for (const element of placesToTravel) {
+//     if (element.id !== 11 || element.id !== 40) {
+//         placesToVisit.push(element)
+//     }
+// }
 
-console.log(placesToVisit);
+// console.log(placesToVisit);

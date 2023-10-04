@@ -1,46 +1,44 @@
 {
-  "diary": [
+  "movies": [
     {
-      "id": 55,
-      "date": "2020-01-22",
-      "title": "Las cosas están yendo bien",
-      "description": "Pese a todo, el esfuerzo que estoy haciendo en aprender, está mereciendo la pena. Ahora soy mucho más consciente de mis habilidades con el diabolo."
+      "id": 1,
+      "title": "El Padrino",
+      "description": "La saga de la familia Corleone, liderada por el patriarca Vito Corleone y su hijo Michael, quien se involucra en el mundo del crimen organizado.",
+      "date": "1972",
+      "img":"images/exercise-3/01.webp",
+      "rating": 9.2
     },
     {
-      "id": 42,
-      "date": "2020-01-22",
-      "title": "Otro día más",
-      "description": "No puedo más, el viento me abraza cual envoltorio de caramelo. Que vida es esta en la que no puedo tener una PS5 por falta de stock..."
+      "id": 2,
+      "title": "El señor de los anillos: El retorno del rey",
+      "description": "La última entrega de la trilogía épica basada en los libros de J.R.R. Tolkien, donde se desarrolla la batalla final por el destino de la Tierra Media.",
+      "date": "2003",
+      "img":"images/exercise-3/02.jpeg",
+      "rating": 8.9
     },
     {
-      "id": 23,
-      "date": "2020-01-22",
-      "title": "Happy flower",
-      "description": "Me flipa!! me encanta!! no puedo estar más feliz!! He acariciado una cabra!!! :D"
+      "id": 3,
+      "title": "Pulp Fiction",
+      "description": "Una historia no lineal que sigue a un grupo de personajes en el mundo del crimen de Los Ángeles, entrelazando varias tramas y momentos icónicos.",
+      "date": "1994",
+      "img":"images/exercise-3/03.jpeg",
+      "rating": 8.9
     },
     {
       "id": 4,
-      "date": "2020-06-23",
-      "title": "Querría borrar esto",
-      "description": "Este fue uno de los peores días de mi vida. Cogí el metro para ir a la Gamergy y resulta que no me dejaron entrar porque compré la entrada equivocada...para la Fashion Week..."
+      "title": "El club de la pelea",
+      "description": "Un empleado de oficina desilusionado y un vendedor de jabón excéntrico forman un club de lucha clandestino que se convierte en un fenómeno subversivo.",
+      "date": "1999",
+      "img":"images/exercise-3/04.webp",
+      "rating": 8.8
     },
     {
-      "id": 1,
-      "date": "2018-04-11",
-      "title": "Querido diario...",
-      "description": "Querido diario, hoy empiezo a escribir mi primera hoja en tus páginas. Espero que mi vida sea tranquila y común :)"
-    },
-    {
-      "id": 22,
-      "date": "2019-11-22",
-      "title": "Hoy por fin",
-      "description": "Hoy por fin veré la nieve. Siempre he querido hacer un muñeco de nieve...Dicen que cobran vida. Olaf! allá voy!"
-    },
-    {
-      "id": 54,
-      "date": "2125-04-23",
-      "title": "!¿Pero que?!",
-      "description": "Como puede ser esto posible? He viajado en el tiempo??? Que clase de Death Note trucada es esta o.O"
+      "id": 5,
+      "title": "El gran dictador",
+      "description": "Una sátira cómica-dramática de Charles Chaplin que critica el fascismo y el nazismo, con el personaje del dictador Adenoid Hynkel.",
+      "date": "1940",
+      "img":"images/exercise-3/05.jpeg",
+      "rating": 8.4
     }
   ]
 }
