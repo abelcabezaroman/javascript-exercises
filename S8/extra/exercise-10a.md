@@ -1,4 +1,4 @@
-Basandonos en el ejercicio 6 (con tener la parte de llamar a los personajes nos vale pero si lo tenemos todo lo podríamos mezclar y hacer un super mega ultra ejercicio 3000) vamos a crear un formulario para añadir nuevos luchadores al elenco.
+Basandonos en el ejercicio 10 (con tener la parte de llamar a los personajes nos vale pero si lo tenemos todo lo podríamos mezclar y hacer un super mega ultra ejercicio 3000) vamos a crear un formulario para añadir nuevos luchadores al elenco.
 
 Para ello añade al html un formulario para añadir los campos:
 
