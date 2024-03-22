@@ -1,12 +1,43 @@
+// const fruits = ['Strawberry', 'Banana', 'Orange', 'Apple'];
+// const foodSchedule = [{name: "Salad", isVegan: true},{name: "Salmon", isVegan: false}, {name: "Tofu", isVegan: true}, {name: "Burger", isVegan: false}, {name: "Rice", isVegan: true}, {name: "Pasta", isVegan: true}];
 
+// for (let index = 0; index < foodSchedule.length; index++) {
+//     const food = foodSchedule[index];
+//     if(!food.isVegan){
+//         food.name = fruits.shift();
+//     }
+// }
 
+// console.log(foodSchedule);
 
-// CUIDADO REDUCE TODAVIA NO LO HEMOS VISTO...PERO SERIA LO IDEAL
-// const products = [{ name: 'Gorra de rodilla', sellCount: 10 }, { name: 'Pantalón de pana', sellCount: 302 }, { name: 'Reloj de papel albal', sellCount: 23 }, { name: 'Inpar de zapatos', sellCount: 6 }];
+// OTRA ALTERNATIVA
 
-// const sellTotalCount = products.reduce((accumulator, product) => accumulator + product.sellCount, 0)
-// // const sellTotalCount = products.reduce(function (accumulator, product) {
-// //     return accumulator + product.sellCount
-// // }, 0)
+// const fruits = ['Strawberry', 'Banana', 'Orange', 'Apple'];
+// const foodSchedule = [{name: "Salad", isVegan: true},{name: "Salmon", isVegan: false}, {name: "Tofu", isVegan: true}, {name: "Burger", isVegan: false}, {name: "Rice", isVegan: true}, {name: "Pasta", isVegan: true}];
 
-// console.log(sellTotalCount);
+// for (let index = 0; index < foodSchedule.length; index++) {
+//     const food = foodSchedule[index];
+//     if(!food.isVegan){
+//         food.name = fruits[0];
+//         fruits.splice(0,1);
+//     }
+// }
+
+// console.log(foodSchedule);
+
+// ALTERNATIVA
+
+const fruits = ['Strawberry', 'Banana', 'Orange', 'Apple'];
+const foodSchedule = [{name: "Salad", isVegan: true},{name: "Salmon", isVegan: false}, {name: "Tofu", isVegan: true}, {name: "Burger", isVegan: false}, {name: "Rice", isVegan: true}, {name: "Pasta", isVegan: true}];
+
+let counter = 0;
+
+for (let index = 0; index < foodSchedule.length; index++) {
+    const food = foodSchedule[index];
+    if(!food.isVegan){
+        food.name = fruits[counter];
+        counter++;
+    }
+}
+
+console.log(foodSchedule);

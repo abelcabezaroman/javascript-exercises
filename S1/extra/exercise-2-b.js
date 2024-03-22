@@ -10,10 +10,6 @@ let sum = 0;
 for (let index = 0; index < products.length; index++) {
     const element = products[index];
     sum += element.sellCount;
-
-    console.log("Sumo " + element.sellCount);
-    console.log(sum);
-
     // sum = sum + element.sellCount;
 }
 
