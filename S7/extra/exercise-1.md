@@ -7,7 +7,6 @@ const videogames = [
     {name: 'The last of Us 2', genders: ['Acción', 'Aventura'], score: 9.8},
     {name: 'Super Mario Bros', genders: ['Plataforma'], score: 8.5},
     {name: 'Genshin Impact', genders: ['RPG', 'Aventura'], score: 7.5},
-    {name: 'Legend of Zelda: Breath of the wild', genders: ['RPG', 'La cosa más puto bonita que he visto nunca
-'], score: 10},
+    {name: 'Legend of Zelda: Breath of the wild', genders: ['RPG', 'La cosa más puto bonita que he visto nunca'], score: 10},
 ]
 ```

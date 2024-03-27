@@ -1,0 +1,9 @@
+Dado el siguiente código. 
+
+Crea una variable y dale el valor del promedio de todos los numeros. 
+
+Para ello, usa un for, suma todos los valores y divideló por la cantidad de números. Luego imprime la variable.
+
+```js
+const numbers = [25, 22, 10, 8, 36, 13, 15];
+```
