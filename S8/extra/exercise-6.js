@@ -7,7 +7,7 @@ async function init() {
 }
 
 async function getCharacters() {
-    const res = await fetch(`http://localhost:3000/characters?_page=${page}&_limit=5`)
+    const res = await fetch(`http://localhost:3000/characters?_page=${page}&_per_page=5`)
     return res.json();
 }
 
@@ -27,7 +27,7 @@ function printCharacters(characters) {
 };
 
 async function getAndPrintCharacters() {
-    const characters = await getCharacters();
+    const {data:characters} = await getCharacters();
 
     addTransition();
 
